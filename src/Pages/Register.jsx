@@ -5,7 +5,7 @@ import UseHooks from "../Hooks/UseHooks";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FiEye } from "react-icons/fi";
+// import { FiEye } from "react-icons/fi";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
@@ -19,6 +19,9 @@ const Register = () => {
     const form = location?.state || '/'
 
     const {register, handleSubmit, formState: { errors }} = useForm();
+
+
+    
       const onSubmit = data => {
         const {email, password, image, fullName} = data;        
         createUser(email, password)
@@ -54,7 +57,7 @@ const Register = () => {
 <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Register now!</h1>
-      <p className="py-6">Unlock exclusive benefits and streamline your AzureHorizon experience by registering with us today. By creating an account, you gain access to special offers, personalized recommendations, and faster booking processes. Whether you're a frequent traveler or planning your first getaway with us, registering allows you to save your preferences, manage your bookings effortlessly, and stay updated on the latest promotions and news. Join our AzureHorizon community and embark on a journey of luxury and convenience. Sign up now to elevate your travel experience to new heights.</p>
+      <p className="py-6">Welcome to Terracotta, where creativity finds its home! Register with us to unlock a world of artisanal wonders and craftsmanship. Join our community of artisans, creators, and enthusiasts passionate about the art of handmade goods. Whether you're a seasoned craftsman or just embarking on your creative journey, Terracotta provides a platform to showcase your talents and connect with like-minded individuals. Sign up today to delve into a realm where imagination knows no bounds, and where every creation tells a story. Join us in celebrating the beauty of craftsmanship, one creation at a time.</p>
     </div>
     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form  onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -97,7 +100,7 @@ const Register = () => {
         </div>
         
         <div className="form-control mt-6">
-          <button type="submit" onClick={handleSuccess} className="btn btn-primary bg-green-500 border-none text-white">Register</button>
+          <button type="submit" onClick={handleSuccess} className="btn btn-primary bg-amber-600 border-none text-white">Register</button>
           <ToastContainer />
         </div>
         <p>Already have an account? <Link className="text-blue-500 underline" to='/login'>Log in</Link></p>

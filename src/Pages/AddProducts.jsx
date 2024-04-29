@@ -1,4 +1,6 @@
 // import { IoMdArrowDropdown } from "react-icons/io";
+import Swal from 'sweetalert2'
+
 
 const AddProducts = () => {
   const handleAdd = (e) => {
@@ -28,6 +30,33 @@ const AddProducts = () => {
       email,
     };
     console.log(addInfo);
+
+
+    fetch('http://localhost:5000/addProduct', {
+        method: 'POST',
+        headers:{
+            'content-type' : 'application/json'
+        },
+        body: JSON.stringify(addInfo)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data);
+        if(data.insertedId){
+            Swal.fire({
+                title: 'Success!',
+                text: 'User added successfully',
+                icon: 'success',
+                confirmButtonText: 'OK'
+              })
+        }
+    })
+
+
+
+
+
+
   };
 
   return (

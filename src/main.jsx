@@ -13,6 +13,9 @@ import Register from './Pages/Register.jsx';
 import Login from './Pages/Login.jsx';
 import AuthProvider from './AuthProvider/AuthProvider.jsx';
 import AddProducts from './Pages/AddProducts.jsx';
+import MyList from './Pages/MyList.jsx';
+import Details from './Pages/Details.jsx';
+import PrivateRoute from './Router/PrivateRoute.jsx';
 // import WorkshopPage from './Pages/WorkshopPage.jsx';
 
 const router = createBrowserRouter([
@@ -28,6 +31,15 @@ const router = createBrowserRouter([
       {
         path: '/add',
         element: <AddProducts></AddProducts>
+      },
+      {
+        path: '/product/:id',
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader:  async({params}) => fetch(``)
+      },
+      {
+        path: '/mylist',
+        element: <MyList></MyList>
       },
       {
         path: '/about',

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Item = ({item}) => {
     const {id, title,subCategory, description,price,image} = item;
@@ -26,7 +27,7 @@ const Item = ({item}) => {
 
 			<p className="dark:text-gray-800">{description}</p>
 		</div>
-		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md text-amber-600" fdprocessedid="r5urib">View Details</button>
+		<Link  to='/product/:id' className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md text-amber-600" fdprocessedid="r5urib">View Details</Link>
 	</div>
 </div>
 

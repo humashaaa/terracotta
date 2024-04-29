@@ -84,7 +84,7 @@ const Login = () => {
           {errors.password && <span className="text-sm text-red-500">This field is required</span>}          
         </div>
         <div className="form-control mt-6">
-          <Link className="btn btn-primary bg-green-500 border-none text-white">Log in</Link>
+          <Link className="btn btn-primary bg-amber-600 border-none text-white">Log in</Link>
         </div>		
 	</form>
 </div>
