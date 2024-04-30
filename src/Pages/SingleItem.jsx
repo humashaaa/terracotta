@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const SingleItem = ({single, index}) => {
-    const {price, rating, stockStatus, name} = single;
+    const {price, rating, stockStatus, name, _id} = single;
     const i = index + 1
 
     return (
@@ -17,7 +17,7 @@ const SingleItem = ({single, index}) => {
         <td>{price}</td>
         <td>{rating}</td>
         <td>{stockStatus}</td>
-        <td className="text-amber-700"><Link>View Details</Link></td>
+        <td className="text-amber-700"><Link to={`/allItem/${_id}`}>View Details</Link></td>
       </tr>
     </tbody>
   

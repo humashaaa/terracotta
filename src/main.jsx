@@ -19,6 +19,7 @@ import PrivateRoute from './Router/PrivateRoute.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
 import AllItem from './Pages/AllItem.jsx';
 import Update from './Pages/Update.jsx';
+import SingleDetails from './Pages/SingleDetails.jsx';
 // import WorkshopPage from './Pages/WorkshopPage.jsx';
 
 const router = createBrowserRouter([
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
         path: '/allItem',
         element: <AllItem></AllItem>,
         loader: ()=> fetch('http://localhost:5000/addProduct')
+      },
+      {
+        path: '/allItem/:id',
+        element: <SingleDetails></SingleDetails>,
+        loader: ()=> fetch(`http://localhost:5000/addProduct/`)
       },
       {
         path: '/add',
