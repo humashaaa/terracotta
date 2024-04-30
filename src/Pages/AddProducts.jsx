@@ -1,8 +1,10 @@
 // import { IoMdArrowDropdown } from "react-icons/io";
 import Swal from 'sweetalert2'
+import UseHooks from '../Hooks/UseHooks';
 
 
 const AddProducts = () => {
+  const {user} = UseHooks()
   const handleAdd = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -15,7 +17,8 @@ const AddProducts = () => {
     const processingTime = form.processingTime.value;
     const stockStatus = form.stockStatus.value;
     const userName = form.userName.value;
-    const email = form.email.value;
+    const userEmail = form.email.value;
+    const photo = form.photo.value;
 
     const addInfo = {
       name,
@@ -27,7 +30,8 @@ const AddProducts = () => {
       processingTime,
       stockStatus,
       userName,
-      email,
+      userEmail,
+      photo
     };
     console.log(addInfo);
 
@@ -45,7 +49,7 @@ const AddProducts = () => {
         if(data.insertedId){
             Swal.fire({
                 title: 'Success!',
-                text: 'User added successfully',
+                text: 'Craft Item added successfully',
                 icon: 'success',
                 confirmButtonText: 'OK'
               })
@@ -256,6 +260,7 @@ l. “Add” button */}
               </label>
               <label className="input-group">
                 <input
+                defaultValue={user.displayName}
                   type="text"
                   name="userName"
                   placeholder="Your name"
@@ -269,6 +274,8 @@ l. “Add” button */}
               </label>
               <label className="input-group">
                 <input
+                defaultValue={user.email}
+                 
                   type="text"
                   name="email"
                   placeholder="Your email"

@@ -16,12 +16,15 @@ import AddProducts from './Pages/AddProducts.jsx';
 import MyList from './Pages/MyList.jsx';
 import Details from './Pages/Details.jsx';
 import PrivateRoute from './Router/PrivateRoute.jsx';
+import ErrorPage from './Pages/ErrorPage.jsx';
+import AllItem from './Pages/AllItem.jsx';
 // import WorkshopPage from './Pages/WorkshopPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
       {
         path: '/',
@@ -29,8 +32,13 @@ const router = createBrowserRouter([
         loader: ()=> fetch('http://localhost:5000/items')
       },
       {
+        path: '/allItem',
+        element: <AllItem></AllItem>
+        // loader: ()=> fetch('http://localhost:5000/items')
+      },
+      {
         path: '/add',
-        element: <AddProducts></AddProducts>
+        element: <PrivateRoute><AddProducts></AddProducts></PrivateRoute>
       },
       {
         path: '/product/:id',
@@ -39,7 +47,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/mylist',
-        element: <MyList></MyList>
+        element: <PrivateRoute><MyList></MyList></PrivateRoute>,
+        // loader: ()=> fetch(`http://localhost:5000/myProduct/${userEmail}`)
       },
       {
         path: '/about',
