@@ -34,8 +34,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/allItem',
-        element: <AllItem></AllItem>
-        // loader: ()=> fetch('http://localhost:5000/items')
+        element: <AllItem></AllItem>,
+        loader: ()=> fetch('http://localhost:5000/addProduct')
       },
       {
         path: '/add',

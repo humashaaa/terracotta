@@ -51,9 +51,7 @@ const Register = () => {
 
 
         <div className="hero min-h-screen bg-base-200">
-          {/* <Helmet>
-                <title>AzureHorizon | Register</title>
-            </Helmet> */}
+          
 <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Register now!</h1>
@@ -79,7 +77,7 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Photo URL</span>
           </label>
-          <input {...register("photo", { required: true })} type="photo" placeholder="photo url" className="input input-bordered"  />
+          <input {...register("photo")} type="photo" placeholder="photo url" className="input input-bordered"  />
           {errors.photo && <span className="text-sm text-red-500">This field is required</span>}
                 </div>
         <div className="form-control">

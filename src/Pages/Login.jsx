@@ -35,9 +35,7 @@ const Login = () => {
       }    
     return (
        <div>
-        {/* <Helmet>
-                <title>AzureHorizon | Log in</title>
-            </Helmet> */}
+  
 <div className="flex justify-center ">
 <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800 ">
 	<h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
@@ -68,7 +66,7 @@ const Login = () => {
 		<p className="px-3 dark:text-gray-600">OR</p>
 		<hr  className="w-full dark:text-gray-600" />
 	</div>
-      <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+      <form onSubmit={()=>handleSubmit(onSubmit)} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>

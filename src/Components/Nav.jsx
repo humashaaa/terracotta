@@ -115,7 +115,7 @@ const Nav = () => {
     user? <div className="dropdown dropdown-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-11 rounded-full">
-                <img src={user?.photoURL || "https://i.ibb.co/y0yrnYQ/1681283571946.jpg" } />
+                <img src={user?.photoURL || "https://i.ibb.co/c2Fy0bk/b-3.jpg" } />
             </div>
         </label>
         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-amber-50 rounded-box md:w-52 w-20">
