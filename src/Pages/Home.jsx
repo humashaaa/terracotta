@@ -3,6 +3,7 @@ import Swipper from "../Components/Swipper";
 import Item from "../Components/Item";
 import Workshop from "./Workshop";
 import Countup from "../Components/Countup";
+import NewsLetter from "../Components/NewsLetter";
 
 const Home = () => {
     const items = useLoaderData()
@@ -20,6 +21,7 @@ const Home = () => {
 
             <Workshop></Workshop>
             <Countup></Countup>
+            <NewsLetter></NewsLetter>
         </div>
     );
 };

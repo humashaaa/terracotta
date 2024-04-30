@@ -4,6 +4,8 @@ import { MdOutlineEmail } from "react-icons/md";
 import banner1 from '../assets/banner1.jpg';
 import banner2 from '../assets/banner2.jpg';
 import banner3 from '../assets/banner3.jpg';
+import { Fade } from "react-awesome-reveal";
+
 // import banner4 from '../assets/banner4.jpg';
 
 const About = () => {
@@ -17,13 +19,14 @@ const About = () => {
 
             
 
-
-
+			<Fade direction={ 'left'}>
 
             <section className="p-4 lg:p-8 dark:bg-gray-100 dark:text-gray-800">
 	<div className="container mx-auto space-y-12">
 		<div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
 			<img src= {banner1} alt="" className="h-80 dark:bg-gray-500 aspect-video" />
+			
+
 			<div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-50">
 				<h3 className="text-3xl font-bold">Tailored Learning Experience
 
@@ -31,6 +34,9 @@ const About = () => {
 				<p className="my-6 dark:text-gray-600">Led by experienced instructors passionate about pottery, our workshops are designed to cater to diverse interests and skill levels. From introductory sessions covering pottery fundamentals to specialized workshops focusing on advanced techniques like wheel throwing, hand-building, glazing, and more, there's something for everyone at terracota.</p>
 			</div>
 		</div>
+
+	
+
 		<div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
 			<img src={banner2} alt="" className="h-80 dark:bg-gray-500 aspect-video" />
 			<div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-50">
@@ -42,6 +48,10 @@ const About = () => {
 </p>
 			</div>
 		</div>
+
+
+
+
 		<div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
 			<img src= {banner3} alt="" className="h-80 dark:bg-gray-500 aspect-video" />
 			<div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-50">
@@ -52,7 +62,7 @@ const About = () => {
 	</div>
 </section>
 
-
+</Fade>
 
 <div className=" flex items-center justify-around">
 
