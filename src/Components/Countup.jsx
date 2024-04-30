@@ -8,7 +8,7 @@ const Countup = () => {
         <div>
 
            <ScrollTrigger onEnter={()=>setCounterOn(true)} onExit={()=>setCounterOn(false)}>
-           <div className="flex justify-around items-center">
+           <div className="flex justify-around items-center ">
                 <div className="flex gap-3">
                     <h1 className="text-3xl font-bold">
                         {counterOn && <CountUp start={0} end={15} duration={2} delay={0}/>} +

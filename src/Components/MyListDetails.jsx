@@ -56,7 +56,7 @@ const MyListDetails = ({product}) => {
 
     return (
         <div>
-              <div className="w-96 mt-10 h-[36rem] rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800 ml-12">
+              <div className="md:w-96 w-80 mt-10 h-[36rem] rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800 md:ml-12 ml-2">
 	           <img src= {photo} alt="" className="object-cover object-center w-96 rounded-t-md h-80 dark:bg-gray-500" />
 	      <div className="flex flex-col justify-between p-6 space-y-8">
 		      <div className="space-y-2">
