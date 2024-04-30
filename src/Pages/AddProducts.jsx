@@ -65,18 +65,6 @@ const AddProducts = () => {
 
   return (
     <div className="p-10">
-      {/* image ( use image URL)
-b. item_name
-c. subcategory_Name
-d. short description
-e. price
-f. Rating
-g. customization- example- yes, no
-h. Processing Time
-i. StockStatus - example- In stock, Made to Order
-j. User Email
-k. User Name
-l. “Add” button */}
 
       <div className="bg-[#F4F3F0] p-24">
         <h2 className="text-3xl font-bold text-center mb-9">Add Product</h2>
@@ -212,13 +200,6 @@ l. “Add” button */}
               <label className="label relative">
                 <span className="label-text">StockStatus</span>
 
-                {/* <details className="dropdown absolute top-7 right-9">
-  <summary className="m-1 btn"><IoMdArrowDropdown /></summary>
-  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-    <li><a>Yes</a></li>
-    <li><a>No </a></li> 
-  </ul>
-</details> */}
               </label>
               <label className="input-group relative">
                 <select
@@ -227,7 +208,6 @@ l. “Add” button */}
                   placeholder="StockStatus"
                   className="input input-bordered w-full"
                 >
-                  {/* <span><IoMdArrowDropdown/></span> */}
                   <option value="In stock" selected>
                     In stock
                   </option>
@@ -236,22 +216,9 @@ l. “Add” button */}
                   </option>
                 </select>
               </label>
-              {/* <select name="stockStatus " className="absolute bottom-14">
-                                <option value= 'a'>A</option>
-                                <option value= 'b'>b</option>
-
-                            </select>
-                         */}
+             
             </div>
           </div>
-          {/* 
-                <details className="dropdown">
-  <summary className="m-1 btn"><IoMdArrowDropdown /></summary>
-  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-    <li><a>Yes</a></li>
-    <li><a>No </a></li>
-  </ul>
-</details> */}
 
           <div className="md:flex mb-8">
             <div className="form-control md:w-1/2">

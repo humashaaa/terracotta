@@ -1,7 +1,55 @@
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyListDetails = ({product}) => {
 
-    const{ photo,  userEmail, subcategory, stockStatus, rating, price, name,description, customization} = product
+    const{ _id, photo,  userEmail, subcategory, stockStatus, rating, price, name,description, customization} = product
+
+    const handleDelete = (_id)=>{
+        console.log(_id);
+
+       Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                console.log("deleted");
+
+
+                fetch(`http://localhost:5000/item/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Item has been deleted.',
+                                'success'
+                            )
+                            // const remaining = coffees.filter(cof => cof._id !== _id);
+                            // setCoffees(remaining);
+                        }
+                    })
+
+            }
+        })
+
+
+
+
+
+
+
+
+
+    }
 
 
 
@@ -23,8 +71,8 @@ const MyListDetails = ({product}) => {
                 </div>
 
                 <div className="mt-5 flex justify-around items-center">
-                    <button className="text-white mt-4 w-36 rounded-xl p-3 bg-amber-500 ">Update</button>
-                    <button className="text-white w-36 mt-4 rounded-xl p-3  bg-red-600">Delete</button>
+                    <Link to={`/updateItem/${_id}`} className="text-white mt-4 w-36 rounded-xl p-3 bg-amber-500 btn">Update</Link>
+                    <button onClick={()=>handleDelete(_id)} className="text-white w-36 mt-4 rounded-xl p-3  bg-red-600">Delete</button>
                 </div>
               </div>
 	      </div>

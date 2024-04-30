@@ -18,6 +18,7 @@ import Details from './Pages/Details.jsx';
 import PrivateRoute from './Router/PrivateRoute.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
 import AllItem from './Pages/AllItem.jsx';
+import Update from './Pages/Update.jsx';
 // import WorkshopPage from './Pages/WorkshopPage.jsx';
 
 const router = createBrowserRouter([
@@ -39,6 +40,12 @@ const router = createBrowserRouter([
       {
         path: '/add',
         element: <PrivateRoute><AddProducts></AddProducts></PrivateRoute>
+      },
+      {
+        path: '/updateItem/:id',
+        element: <PrivateRoute><Update></Update></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/item/${params.id}`)
+
       },
       {
         path: '/product/:id',
