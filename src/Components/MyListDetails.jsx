@@ -21,7 +21,7 @@ const MyListDetails = ({product}) => {
                 console.log("deleted");
 
 
-                fetch(`http://localhost:5000/item/${_id}`, {
+                fetch(`https://assignment-10-server-two-snowy.vercel.app/item/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

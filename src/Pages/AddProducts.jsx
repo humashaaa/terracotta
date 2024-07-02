@@ -36,7 +36,7 @@ const AddProducts = () => {
     console.log(addInfo);
 
 
-    fetch('http://localhost:5000/addProduct', {
+    fetch('https://assignment-10-server-two-snowy.vercel.app/addProduct', {
         method: 'POST',
         headers:{
             'content-type' : 'application/json'

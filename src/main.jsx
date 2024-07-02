@@ -31,17 +31,17 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: ()=> fetch('http://localhost:5000/items')
+        loader: ()=> fetch('https://assignment-10-server-two-snowy.vercel.app/items')
       },
       {
         path: '/allItem',
         element: <AllItem></AllItem>,
-        loader: ()=> fetch('http://localhost:5000/addProduct')
+        loader: ()=> fetch('https://assignment-10-server-two-snowy.vercel.app/addProduct')
       },
       {
         path: '/allItem/:id',
         element: <SingleDetails></SingleDetails>,
-        loader: ()=> fetch(`http://localhost:5000/addProduct/`)
+        loader: ()=> fetch(`https://assignment-10-server-two-snowy.vercel.app/addProduct/`)
       },
       {
         path: '/add',
@@ -50,18 +50,18 @@ const router = createBrowserRouter([
       {
         path: '/updateItem/:id',
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/item/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-10-server-two-snowy.vercel.app/item/${params.id}`)
 
       },
       {
         path: '/product/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/items')
+        loader: () => fetch('https://assignment-10-server-two-snowy.vercel.app/items')
       },
       {
         path: '/mylist',
         element: <PrivateRoute><MyList></MyList></PrivateRoute>,
-        // loader: ()=> fetch(`http://localhost:5000/myProduct/${userEmail}`)
+        // loader: ()=> fetch(`https://assignment-10-server-two-snowy.vercel.app/myProduct/${userEmail}`)
       },
       {
         path: '/about',
